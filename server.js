@@ -13,7 +13,7 @@ process.on('uncaughtException', (err) => {
 //     '<PASSWORD>',
 //     process.env.DATABASE_PASSWORD,
 // );
-mongoose.connect(process.env.DATABASE, {
+mongoose.connect("mongodb+srv://Quiz_user:BAALxFJgzw0gJMTC@cluster0.h5iid1p.mongodb.net/quiz?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then((con) => console.log('connected to database'))
