@@ -8,12 +8,15 @@ process.on('uncaughtException', (err) => {
     process.exit(1);
 })
 
-const DB = process.env.DATABASE
+// const DB = process.env.DATABASE;
 // process.env.DATABASE.replace(
 //     '<PASSWORD>',
 //     process.env.DATABASE_PASSWORD,
 // );
-mongoose.connect(DB).then((con) => console.log('connected to database'))
+mongoose.connect(process.env.DATABASE, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+}).then((con) => console.log('connected to database'))
 
 const port = process.env.port || 3000;
 app.listen(port, () => {
