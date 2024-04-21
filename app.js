@@ -55,6 +55,10 @@ app.use(hpp({
 }));
 
 // Routes
+app.get('/', (res, req, next) => {
+    res.send("Hi, I am live ");
+})
+
 app.use('/api/v1/quizzes', quizRotes);
 app.use('/api/v1/users', userRoutes);
 
