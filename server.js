@@ -18,7 +18,7 @@ mongoose.connect("mongodb+srv://Quiz_user:BAALxFJgzw0gJMTC@cluster0.h5iid1p.mong
     useUnifiedTopology: true,
 }).then((con) => console.log('connected to database'))
 
-const port = process.env.port || 3000;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log('server has listening on port ' + port);
 });
