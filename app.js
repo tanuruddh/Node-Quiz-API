@@ -25,12 +25,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(helmet());
 
 // for limiting repeated requests to API
-const limiter = rateLimit({
-    max: 100,
-    windowMs: 15 * 60 * 1000,
-    message: "Too many requests from this IP, please try again later"
-})
-app.use(limiter);
+// const limiter = rateLimit({
+//     max: 100,
+//     windowMs: 15 * 60 * 1000,
+//     message: "Too many requests from this IP, please try again later"
+// })
+// app.use(limiter);
 
 // for adding body to req
 app.use(express.json({ limit: '10kb' }));
