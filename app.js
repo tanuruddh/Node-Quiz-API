@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // fro secure Express apps by setting HTTP response headers.
 app.use(helmet());
 
-for limiting repeated requests to API
+// for limiting repeated requests to API
 const limiter = rateLimit({
     max: 100,
     windowMs: 15 * 60 * 1000,
